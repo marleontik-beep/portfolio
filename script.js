@@ -15,6 +15,17 @@ window.addEventListener('resize', fitFrames);
 window.addEventListener('load', fitFrames);
 fitFrames();
 
+// ===== Кнопка брендбука: на телефоне — мобильная версия, на десктопе — десктопная =====
+const brandbookBtn = document.getElementById('brandbookBtn');
+function setBrandbookHref() {
+  if (!brandbookBtn) return;
+  brandbookBtn.href = window.innerWidth <= 820
+    ? brandbookBtn.dataset.mobile
+    : brandbookBtn.dataset.desktop;
+}
+window.addEventListener('resize', setBrandbookHref);
+setBrandbookHref();
+
 // ===== Полноэкранный просмотр макетов («Открыть макет») =====
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
