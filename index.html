@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Марианна — портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Зернистость поверх всего сайта -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Навигация (матовое стекло) -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav__logo">Marianna</a>
+    <div class="nav__links">
+      <a href="#works" class="nav__link">Работы</a>
+      <a href="#about" class="nav__link">Обо мне</a>
+      <a href="#contact" class="nav__link nav__link--btn">Связаться</a>
+    </div>
+  </nav>
+
+  <!-- ГЛАВНЫЙ ЭКРАН -->
+  <header class="hero" id="top">
+    <picture>
+      <!-- на телефонах — вертикальное фото -->
+      <source media="(max-width: 820px)" srcset="assets/hero-mobile.png">
+      <img src="assets/hero.png" alt="Portfolio — Марианна" class="hero__img" id="heroImg">
+    </picture>
+    <div class="hero__bottom">
+      <div class="hero__chips">
+        <span class="pill">UX/UI</span>
+        <span class="pill">Web design</span>
+        <span class="pill">Identity</span>
+        <span class="pill">Graphic design</span>
+        <span class="pill">Figma</span>
+        <span class="pill">Branding</span>
+        <span class="pill">English — B2</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- БЕГУЩАЯ СТРОКА (тянется при скролле) -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marqueeTrack">
+      <span>веб-дизайн&nbsp;✺&nbsp;UX/UI&nbsp;✺&nbsp;брендинг&nbsp;✺&nbsp;лендинги&nbsp;✺&nbsp;интернет-магазины&nbsp;✺&nbsp;</span>
+      <span>веб-дизайн&nbsp;✺&nbsp;UX/UI&nbsp;✺&nbsp;брендинг&nbsp;✺&nbsp;лендинги&nbsp;✺&nbsp;интернет-магазины&nbsp;✺&nbsp;</span>
+    </div>
+  </section>
+
+  <!-- РАБОТЫ -->
+  <main class="works" id="works">
+    <div class="works__head reveal">
+      <h2 class="section-title">Избранные<br><em>работы</em></h2>
+      <span class="works__count">(04)</span>
+    </div>
+
+    <!-- 1. АВГ — живой сайт -->
+    <article class="work">
+      <div class="work__info">
+        <span class="work__num">01</span>
+        <h3 class="work__title">АВГ — корпоративный сайт</h3>
+        <p class="work__desc">Действующий сайт компании: дизайн, сборка и запуск. Можно посмотреть вживую — он уже работает в интернете.</p>
+        <div class="work__tags">
+          <span class="tag">веб-дизайн</span><span class="tag">разработка</span><span class="tag">live</span>
+        </div>
+        <a class="btn" href="https://avg-ru.shop/" target="_blank" rel="noopener">Открыть сайт</a>
+      </div>
+      <div class="work__media">
+        <div class="browser">
+          <div class="browser__bar">
+            <i></i><i></i><i></i>
+            <span class="browser__url">avg-ru.shop</span>
+          </div>
+          <div class="browser__screen browser__screen--iframe">
+            <iframe src="https://avg-ru.shop/" title="Сайт АВГ" loading="lazy" tabindex="-1" class="fit-frame"></iframe>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Брендбук V&M Grupp — интерактивный -->
+    <article class="work">
+      <div class="work__info">
+        <span class="work__num">02</span>
+        <h3 class="work__title">V&amp;M Grupp — брендбук</h3>
+        <p class="work__desc">Фирменный стиль строительной компании: логотип, цвета, типографика и мокапы. Брендбук интерактивный — его можно листать прямо здесь.</p>
+        <div class="work__tags">
+          <span class="tag">брендинг</span><span class="tag">логотип</span><span class="tag">айдентика</span>
+        </div>
+        <a class="btn" href="projects/vm-brandbook.html" target="_blank" rel="noopener">Смотреть брендбук</a>
+      </div>
+      <div class="work__media">
+        <div class="laptop">
+          <div class="laptop__screen">
+            <iframe src="projects/vm-brandbook.html" title="Брендбук V&M Grupp" loading="lazy" class="fit-frame fit-frame--live"></iframe>
+          </div>
+          <div class="laptop__base"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Проект из Figma — мокап (десктоп 1280×2500) -->
+    <article class="work">
+      <div class="work__info">
+        <span class="work__num">03</span>
+        <h3 class="work__title">Lumière — свадебное агентство</h3>
+        <p class="work__desc">Лендинг для wedding-агентства: воздушная типографика с засечками, бежевая палитра и атмосферные фото. Полное планирование, камерные свадьбы и торжества за границей — всё в одной странице. Наведи на окно и скролль, чтобы посмотреть макет целиком.</p>
+        <div class="work__tags">
+          <span class="tag">UX/UI</span><span class="tag">лендинг</span><span class="tag">figma</span>
+        </div>
+        <button class="btn" type="button" data-view="figma/project-1.png" aria-label="Открыть макет Lumière на весь экран">Открыть макет</button>
+      </div>
+      <div class="work__media">
+        <div class="browser">
+          <div class="browser__bar">
+            <i></i><i></i><i></i>
+            <span class="browser__url">lumiere.wedding</span>
+          </div>
+          <div class="browser__screen browser__screen--scroll">
+            <img src="figma/project-1.png" alt="Макет сайта свадебного агентства Lumière" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Проект из Figma — длинный скрин в макбуке -->
+    <article class="work">
+      <div class="work__info">
+        <span class="work__num">04</span>
+        <h3 class="work__title">Ombrelune — нишевая парфюмерия</h3>
+        <p class="work__desc">Концепт-бутик нишевой парфюмерии: тёмная атмосфера, французская эстетика и коллекции ароматов L'Ombre, La Peau, Le Souffle и Les Bois. Страница длинная — скролль её прямо внутри MacBook.</p>
+        <div class="work__tags">
+          <span class="tag">UX/UI</span><span class="tag">e-commerce</span><span class="tag">figma</span>
+        </div>
+        <button class="btn" type="button" data-view="figma/project-2.png" aria-label="Открыть макет Ombrelune на весь экран">Открыть макет</button>
+      </div>
+      <div class="work__media">
+        <div class="laptop">
+          <div class="laptop__screen laptop__screen--scroll">
+            <img src="figma/project-2.png" alt="Макет интернет-бутика парфюмерии Ombrelune" loading="lazy">
+          </div>
+          <div class="laptop__base"></div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- ОБО МНЕ -->
+  <section class="about" id="about">
+    <div class="about__card glass reveal">
+      <h2 class="section-title section-title--small">Обо <em>мне</em></h2>
+      <p class="about__text">Привет! Я Марианна — дизайнер, который любит, когда сайт не просто открыт, а прожит. У меня математический бэкграунд, учеба в Карловом университете в Праге, внимательность к контексту и тяга к визуальным историям с атмосферой. Поэтому я собираю проекты не только глазами, но и головой: через структуру, ритм, настроение и детали.</p>
+      <p class="about__text">Я создаю сайты, лендинги и визуальные концепции с характером: чистая типографика, выразительные акценты, живая композиция и ощущение, что у бренда есть свой голос. Я превращаю вашу идею в цифровое пространство, куда хочется зайти, задержаться и нажать «Связаться».</p>
+      <div class="about__chips">
+        <span class="chip">Figma</span>
+        <span class="chip">UX/UI</span>
+        <span class="chip">Брендинг</span>
+        <span class="chip">Лендинги</span>
+        <span class="chip">Анимации</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <footer class="footer" id="contact">
+    <div class="footer__torn" aria-hidden="true"></div>
+    <div class="footer__inner">
+      <p class="footer__label reveal">Есть идея? Напишите мне в Telegram</p>
+      <a href="https://t.me/hrupkoje_ditya" target="_blank" rel="noopener" class="footer__mail reveal" data-delay="100">@hrupkoje_ditya</a>
+      <p class="footer__copy">© 2026 Марианна</p>
+    </div>
+  </footer>
+
+  <!-- Полноэкранный просмотр макета -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Закрыть">✕</button>
+    <div class="lightbox__scroll">
+      <img src="" alt="Макет во весь экран" id="lightboxImg">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
